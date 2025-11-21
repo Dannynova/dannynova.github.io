@@ -1,0 +1,97 @@
+:root{
+  --bg:#ffffff; --text:#0b1220; --accent:#0a84ff; --muted:#6b7280; --max:1100px;
+  --radius:10px; --gap:16px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+
+/* Page background image with subtle overlay for readability */
+body {
+  position:relative;
+  background-color: var(--bg); /* fallback */
+}
+
+/* use a fixed pseudo-element so content keeps its stacking context */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)), url('images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* reduce motion / avoid parallax on mobile */
+@media (max-width: 800px){
+  body::before{
+    background-attachment: scroll;
+    background-position: center top;
+    background-image: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('images/bg.jpg');
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce){
+  body::before { will-change: auto; }
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+a{color:var(--accent);text-decoration:none}
+.brand{font-weight:700;font-size:1.1rem}
+.site-header{border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:50}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.main-nav{display:flex;gap:12px;align-items:center}
+.main-nav a{padding:8px 6px;border-radius:6px}
+.main-nav a.cta{background:var(--accent);color:#fff;padding:8px 12px}
+.menu-toggle{display:none;background:none;border:1px solid #ddd;padding:6px;border-radius:6px}
+
+/* Skip link */
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;padding:8px 12px;background:#000;color:#fff;border-radius:6px;left:16px;top:16px;z-index:999}
+
+/* Hero */
+.hero{padding:36px 0}
+.hero-inner{display:flex;gap:24px;align-items:center}
+.hero-text{flex:1}
+.hero-media{flex:1}
+.video-placeholder{background:#f3f4f6;border-radius:8px;height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* Hero video embed */
+.video-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px}
+.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* Sections */
+.section{padding:28px 0}
+.card-grid, .video-grid, .product-grid{display:grid;gap:16px}
+.card-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.video-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.product-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+/* Subscribe */
+.subscribe-form{display:flex;gap:8px;align-items:center}
+.subscribe-form input[type="email"]{flex:1;padding:10px;border:1px solid #e5e7eb;border-radius:8px}
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+.btn.outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee;padding:24px 0;margin-top:36px}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;align-items:center}
+.legal{color:var(--muted);font-size:0.9rem}
+
+/* Utilities */
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+.noscript-warning{background:#fffbeb;color:#92400e;padding:12px;margin:12px;border-radius:8px}
+
+/* Responsive */
+@media (max-width:800px){
+  .hero-inner{flex-direction:column}
+  .main-nav{position:absolute;left:0;right:0;top:64px;background:#fff;flex-direction:column;padding:12px;display:none}
+  .main-nav[data-open="true"]{display:flex}
+  .menu-toggle{display:inline-block}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
