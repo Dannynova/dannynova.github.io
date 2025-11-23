@@ -37,7 +37,7 @@ window.initAnalytics = window.initAnalytics || function(event){
     });
 
     // Cookie banner handling (HTML banner present to show immediately)
-    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieBanner = document.getElementById('cookie-overlay');
     const acceptBtn = document.getElementById('acceptCookies');
     const rejectBtn = document.getElementById('rejectCookies');
 
@@ -256,3 +256,4 @@ function normalizeAffiliateLinks(){
 }
 // call after DOM ready
 try{ normalizeAffiliateLinks(); } catch(e){}
+
