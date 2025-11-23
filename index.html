@@ -1,27 +1,39 @@
 <!doctype html>
 <html lang="en">
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5268090468184213"
-     crossorigin="anonymous"></script>
+<head>
+  <!-- removed immediate AdSense script to avoid serving ads on low-content pages -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TechScope — Practical AI and Tech for Everyday Life</title>
   <meta name="description" content="TechScope brings practical AI, lifestyle tech, and creator tools that save time, money, and stress. Watch reviews, tutorials, and hands-on demos." />
-  <link rel="canonical" href="https://www.youtube.com/@TechScope-k9i" />
+  <meta name="author" content="TechScope" />
+  <link rel="canonical" href="https://dannynova.github.io/" />
   <meta name="theme-color" content="#0a84ff" />
   <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
+  <meta name="robots" content="index,follow" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
     "name":"TechScope",
-    "url":"https://www.youtube.com/@TechScope-k9i",
+    "url":"https://dannynova.github.io/",
     "description":"Practical AI, simple tools, real results.",
-    "potentialAction": {
-      "@type":"SearchAction",
-      "target":"https://example.com/?s={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
+    "potentialAction": { "@type": "SearchAction", "target": "https://dannynova.github.io/?s={search_term}", "query-input": "required name=search_term" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"TechScope",
+    "url":"https://dannynova.github.io/",
+    "logo":"https://dannynova.github.io/icons/icon-192.png",
+    "sameAs":[
+      "https://www.youtube.com/@TechScope-k9i"
+    ]
   }
   </script>
 
@@ -30,15 +42,26 @@
   <meta property="og:title" content="TechScope — Practical AI and Tech for Everyday Life" />
   <meta property="og:description" content="Shorts, tutorials, and honest reviews for creators and busy people." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://example.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://dannynova.github.io/" />
+  <meta property="og:image" content="https://dannynova.github.io/images/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@TechScope" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin />
-  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+  <link rel="preconnect" href="https://www.youtube.com/@TechScope-k9i" crossorigin />
+  <link rel="preconnect" href="https://www.youtube.com/@TechScope-k9i" crossorigin />
 </head>
 <body>
+  <!-- Cookie banner inserted so it appears immediately on page load -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" data-visible>
+    <div class="wrap cookie-inner">
+      <p class="cookie-text">We use cookies for analytics and ads. By choosing <strong>Accept</strong>, you allow loading of optional tracking and ad scripts. <a href="privacy.html">Privacy policy</a>.</p>
+      <div class="cookie-actions">
+        <button id="acceptCookies" class="btn small">Accept</button>
+        <button id="rejectCookies" class="btn outline small">Reject</button>
+      </div>
+    </div>
+  </div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" role="banner">
@@ -72,38 +95,78 @@
           </div>
         </div>
         <div class="hero-media" aria-hidden="true">
-          <!-- Placeholder for embedded latest YouTube video -->
           <div class="video-placeholder">Latest YouTube Short</div>
         </div>
       </div>
     </section>
 
+    <!-- New: more on-page, indexable content to satisfy publisher-content requirements -->
+    <section id="site-content" class="section wrap" aria-labelledby="site-content-heading">
+      <h2 id="site-content-heading">Why We Test Gadgets — Real Benefits, Not Hype</h2>
+      <p>At TechScope we test gadgets against a simple standard: does this device deliver measurable benefits for real people? Instead of listing features, we measure outcomes — minutes saved, bills reduced, tasks automated, or sleep improved. Our goal is to give you practical evidence so you can make buying decisions without guessing.</p>
+
+      <p>Every review includes a short verdict up front (so you can decide quickly), followed by the test setup, the real-world results we observed, and any trade-offs we found. We prefer devices that are affordable, easy to set up, and that require minimal ongoing maintenance. When a gadget needs a more complex setup to reveal its value (for example, a home automation hub), we provide step-by-step configuration notes and explain how to reproduce our measurements.</p>
+
+      <p>Why focus on measurable benefits? Many reviews list specs and nice-to-have features but skip the part most readers care about: what actually changes after you install the device. We measure things like energy draw (using simple kWh measurements), time for common tasks (before vs after automation), or tracking sleep metrics over a week. That way you can estimate return on investment and pick gear that fits your priorities.</p>
+
+      <p>We also cover low-friction tools for creators: small automation scripts, thumbnail workflows, and AI prompts that reduce repetitive work. Each tutorial includes downloads or starter code so you can try the technique right away. If you prefer video, our shorts show the key takeaways in under a minute and link to the full written test results.</p>
+
+      <p>Transparency matters. We clearly disclose affiliate links and sponsored posts, show how we tested devices, and provide contact information if you want deeper details. If a product didn’t perform or had important caveats, the verdict says so — we don’t hide negatives behind marketing language.</p>
+
+      <p>If you’re evaluating a gadget to save time, cut monthly costs, or make daily routines easier, start with our “Quick Benefit Checklist” below each review to see whether it fits your needs. For readers who want to replicate our tests, we include exact settings, test duration, and raw results where possible so you can compare reliably.</p>
+    </section>
+
+    <!-- Affiliate disclosure (visible near reviews and footer) -->
+    <section class="wrap" aria-label="Affiliate disclosure">
+      <p class="affiliate-disclosure muted">Affiliate disclosure: some links on this site are affiliate links. If you buy through an affiliate link, we may earn a commission at no extra cost to you — this helps fund testing and reporting. Recommendations are based on hands-on tests and measured benefits.</p>
+    </section>
+
+    <!-- existing watch section (unchanged) -->
     <section id="watch" class="section wrap" aria-labelledby="watch-heading">
       <h2 id="watch-heading">Latest Videos</h2>
       <p>Embedded Shorts and full reviews — watch here or on our YouTube channel.</p>
       <div class="video-grid">
         <div class="video-card" role="article" aria-labelledby="video1-title">
           <h3 id="video1-title">Latest Short — Quick tips</h3>
-          <div class="video-embed" aria-hidden="false">
+          <div class="video-embed">
+            <!-- consent-gated iframe: will not set src until consent -->
             <iframe
-              src="https://www.youtube-nocookie.com/embed/BxaAn-wQDnQ"
+              class="consent-iframe"
+              data-src="https://www.youtube-nocookie.com/embed/BxaAn-wQDnQ"
+              src="about:blank"
               title="Latest Short — TechScope"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen
+              aria-hidden="false"></iframe>
+
+            <noscript>
+              <p class="muted">Enable JavaScript to view embedded video or <a href="https://www.youtube.com/@TechScope-k9i" target="_blank" rel="noopener noreferrer">open on YouTube</a>.</p>
+            </noscript>
+
+            <p class="muted small-consent-note">Videos load only after you accept cookies. <button class="open-video-btn btn outline small" data-href="https://youtu.be/BxaAn-wQDnQ">Open on YouTube</button></p>
           </div>
-          <p class="visually-hidden">Watch on YouTube — <a href="https://youtu.be/BxaAn-wQDnQ" target="_blank" rel="noopener noreferrer">Open video</a></p>
+          <p class="visually-hidden">Watch on YouTube — <a href="https://www.youtube.com/@TechScope-k9i" target="_blank" rel="noopener noreferrer">Open video</a></p>
         </div>
 
         <div class="video-card" role="article" aria-labelledby="video2-title">
           <h3 id="video2-title">Short — Workflow hack</h3>
           <div class="video-embed">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/u-N696Q_5PE"
+              class="consent-iframe"
+              data-src="https://www.youtube-nocookie.com/embed/u-N696Q_5PE"
+              src="about:blank"
               title="Workflow hack — TechScope"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen
+              aria-hidden="false"></iframe>
+
+            <noscript>
+              <p class="muted">Enable JavaScript to view embedded video or <a href="https://youtu.be/u-N696Q_5PE" target="_blank" rel="noopener noreferrer">open on YouTube</a>.</p>
+            </noscript>
+
+            <p class="muted small-consent-note">Videos load only after you accept cookies. <button class="open-video-btn btn outline small" data-href="https://youtu.be/u-N696Q_5PE">Open on YouTube</button></p>
           </div>
           <p class="visually-hidden">Watch on YouTube — <a href="https://youtu.be/u-N696Q_5PE" target="_blank" rel="noopener noreferrer">Open video</a></p>
         </div>
@@ -112,11 +175,20 @@
           <h3 id="video3-title">Short — Device review highlights</h3>
           <div class="video-embed">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/22xozVf1bE0"
+              class="consent-iframe"
+              data-src="https://www.youtube-nocookie.com/embed/22xozVf1bE0"
+              src="about:blank"
               title="Device review highlights — TechScope"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen
+              aria-hidden="false"></iframe>
+
+            <noscript>
+              <p class="muted">Enable JavaScript to view embedded video or <a href="https://youtu.be/22xozVf1bE0" target="_blank" rel="noopener noreferrer">open on YouTube</a>.</p>
+            </noscript>
+
+            <p class="muted small-consent-note">Videos load only after you accept cookies. <button class="open-video-btn btn outline small" data-href="https://youtu.be/22xozVf1bE0">Open on YouTube</button></p>
           </div>
           <p class="visually-hidden">Watch on YouTube — <a href="https://youtu.be/22xozVf1bE0" target="_blank" rel="noopener noreferrer">Open video</a></p>
         </div>
@@ -127,19 +199,39 @@
       <h2 id="blog-heading">Featured Articles</h2>
       <div class="card-grid">
         <article class="card">
-          <h3>AI Tools You Should Use Today</h3>
-          <p>Short, practical recommendations to save time and money.</p>
-          <a class="read-more" href="https://youtube.com/shorts/i8Gv6QcDUHs?si=0U5wr5CTh-KGS20r">Read more →</a>
+          <h3><a href="articles/ai-tools.html">AI Tools You Should Use Today</a></h3>
+          <p>Short, practical recommendations to save time and money — details, examples and how to get started with each tool.</p>
+          <a class="read-more" href="articles/ai-tools.html">Read more →</a>
         </article>
+
         <article class="card">
-          <h3>How to Automate Your Side Hustle</h3>
-          <p>Tools and workflows that free up your time while you earn.</p>
-          <a class="read-more" href="https://youtube.com/shorts/rb9oDr38GWg?si=ZgVujsM74HqYWKLd">Read more →</a>
+          <h3><a href="articles/automation-scripts.html">Small Automation Scripts That Save Hours</a></h3>
+          <p>Simple Python/Bash snippets and workflows to eliminate repetitive tasks and free up productive time.</p>
+          <a class="read-more" href="articles/automation-scripts.html">Read more →</a>
         </article>
+
         <article class="card">
-          <h3>Home Gadgets That Cut Your Bills</h3>
-          <p>Affordable devices that actually reduce energy use.</p>
-          <a class="read-more" href="https://youtube.com/shorts/SPFewdu-JUM?si=V4onfpe7VuNQOBu0">Read more →</a>
+          <h3><a href="articles/thumbnail-workflow.html">Thumbnail Workflow: Template, Batch Export</a></h3>
+          <p>A repeatable thumbnail system that speeds production and improves click-through rates.</p>
+          <a class="read-more" href="articles/thumbnail-workflow.html">Read more →</a>
+        </article>
+
+        <article class="card">
+          <h3><a href="articles/home-gadgets-cut-bills.html">Home Gadgets That Cut Your Bills</a></h3>
+          <p>Affordable devices and setup tips that reduce energy use and lower monthly bills without sacrificing comfort.</p>
+          <a class="read-more" href="articles/home-gadgets-cut-bills.html">Read more →</a>
+        </article>
+
+        <article class="card">
+          <h3><a href="articles/repurpose-content.html">Batch Content Repurposing: Turn One Video into 10 Assets</a></h3>
+          <p>Turn one recording into shorts, social posts, captions and a blog post using a simple batch flow. Includes CSV and starter scripts.</p>
+          <a class="read-more" href="articles/repurpose-content.html">Read more →</a>
+        </article>
+
+        <article class="card">
+          <h3><a href="articles/privacy-analytics.html">Privacy‑first Analytics for Creators</a></h3>
+          <p>Measure what matters with privacy-aware analytics — implementation tips, consent strategy, and a starter event snippet.</p>
+          <a class="read-more" href="articles/privacy-analytics.html">Read more →</a>
         </article>
       </div>
     </section>
@@ -151,27 +243,55 @@
         <div class="product">
           <h4>Smart Sleep Light — $15</h4>
           <p>Progressive light + sleep tracking. <a href="https://a.co/d/ez57gcO">Read review</a></p>
-          <a class="affiliate" href="https://s.click.aliexpress.com/e/_EGMiaYo" rel="nofollow noopener noreferrer">Buy via affiliate link</a>
+          <a class="affiliate" href="https://s.click.aliexpress.com/e/_EGMiaYo" rel="sponsored nofollow noopener noreferrer">Buy via affiliate link</a>
         </div>
         <div class="product">
           <h4>AI Meal Planner — Free</h4>
           <p>Auto grocery lists and calorie tracking. <a href="https://a.co/d/eY68RE9">Read review</a></p>
-          <a class="affiliate" href="https://a.co/d/eY68RE9" rel="nofollow noopener noreferrer">Try it</a>
+          <a class="affiliate" href="https://a.co/d/eY68RE9" rel="sponsored nofollow noopener noreferrer">Try it</a>
         </div>
       </div>
     </section>
 
     <section class="subscribe wrap" aria-labelledby="subscribe-heading">
       <h2 id="subscribe-heading">Stay in the Loop</h2>
-      <p>Get weekly tool picks, short scripts, and hands-on tutorials — straight to your inbox.</p>
-      <form class="subscribe-form" action="https://formspree.io/f/your-form-id" method="post" aria-label="Subscribe to newsletter">
-        <label for="email" class="visually-hidden">Email address</label>
-        <input id="email" type="email" name="email" placeholder="Your email address" required aria-required="true" />
-        <button type="submit" class="btn">Subscribe</button>
-        <p class="form-note" id="privacy-note">We never share your email. Read our <a href="privacy.html">privacy policy</a>.</p>
-      </form>
+      <p>Get weekly tool picks, short scripts, and hands-on tutorials — choose how you follow us.</p>
+
+      <div class="subscribe-row">
+        <!-- YouTube subscribe (opens new tab with confirmation) -->
+        <div class="subscribe-yt" aria-label="Subscribe on YouTube">
+          <p class="muted">Prefer video? Subscribe on YouTube for shorts, quick tips and walkthroughs.</p>
+          <a
+            id="yt-subscribe-btn"
+            class="btn"
+            href="https://www.youtube.com/@TechScope-k9i?sub_confirmation=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track="subscribe:youtube"
+            aria-label="Subscribe to TechScope on YouTube (opens in new tab)">
+            Subscribe on YouTube
+          </a>
+        </div>
+
+        <!-- Email subscribe (hosted form endpoint) -->
+        <form id="email-subscribe-form" class="subscribe-form" action="https://formspree.io/f/your-form-id" method="POST" aria-label="Subscribe by email">
+          <label for="sub-email" class="visually-hidden">Email address</label>
+          <input id="sub-email" name="email" type="email" placeholder="Your email address" required />
+          <button type="submit" class="btn" data-track="subscribe:email">Join by Email</button>
+          <p class="form-note">We never share your email. Read our <a href="privacy.html">privacy policy</a>.</p>
+        </form>
+      </div>
     </section>
   </main>
+
+  <!-- Consent-gated ad area (no script injected until user accepts cookies) -->
+  <section id="ads" class="section wrap" aria-labelledby="ads-heading">
+    <h2 id="ads-heading">Sponsored & promoted</h2>
+    <p class="muted">Ads and promoted content load only after you accept cookies.</p>
+    <div id="ad-slot-1" class="ad-slot" aria-hidden="true">
+      <!-- Ad will be injected here after consent. Replace AD_SLOT_ID with your slot after approval. -->
+    </div>
+  </section>
 
   <footer class="site-footer" role="contentinfo">
     <div class="wrap footer-inner">
@@ -184,6 +304,7 @@
           <a href="about.html">About</a>
           <a href="privacy.html">Privacy</a>
           <a href="mailto:techscope60@gmail.com">Contact</a>
+          <button id="manage-cookies" class="btn outline small" type="button">Manage cookies</button>
         </nav>
         <p class="legal">© <span id="year"></span> TechScope. All rights reserved.</p>
       </div>

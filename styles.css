@@ -61,7 +61,7 @@ a{color:var(--accent);text-decoration:none}
 .hero-media{flex:1}
 .video-placeholder{background:#f3f4f6;border-radius:8px;height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
 
-/* Hero video embed */
+/* Responsive video embed */
 .video-embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px}
 .video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 
@@ -95,3 +95,37 @@ a{color:var(--accent);text-decoration:none}
   .menu-toggle{display:inline-block}
   .footer-inner{flex-direction:column;align-items:flex-start}
 }
+
+/* Cookie banner */
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:14px;z-index:9999;background:linear-gradient(#ffffff,#fbfdff);box-shadow:0 6px 18px rgba(11,18,32,0.08);padding:12px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cookie-inner{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn.small{padding:6px 10px;font-size:0.9rem}
+.btn.outline.small{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+/* small note for ad-slot */
+.ad-slot{min-height:90px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:rgba(250,250,250,0.6);color:var(--muted);padding:12px}
+
+/* hidden helper to hide banner via JS or when consent present */
+.cookie-banner.hidden{display:none !important}
+
+/* make banner less intrusive on narrow screens */
+@media (max-width:600px){
+  .cookie-inner{flex-direction:column;align-items:flex-start}
+  .cookie-actions{width:100%;justify-content:flex-end}
+  .subscribe-row{flex-direction:column}
+}
+
+/* Article meta + content polish */
+.article-meta{color:var(--muted);font-size:0.95rem;margin:8px 0 18px;display:flex;gap:10px;align-items:center}
+.article-meta .meta-author{font-weight:600}
+.article-meta .meta-time{opacity:0.9}
+
+/* Improved focus outline for keyboard users */
+a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(10,132,255,0.18);outline-offset:3px}
+
+/* Article typography improvements */
+article h1{font-size:1.9rem;margin-bottom:6px}
+article p{line-height:1.65;color:var(--text);margin:0 0 14px}
+
+/* small layout for subscribe row */
+.subscribe-row{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+.subscribe-yt{min-width:220px}

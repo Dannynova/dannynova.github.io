@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Video Script Generator — TechScope</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>AI Video Script Generator</h1>
+    <p class="muted">Enter a topic and select tone/length. Scripts are generated after you confirm cookie consent.</p>
+
+    <form id="script-form" aria-label="Generate video script">
+      <label for="topic">Topic</label>
+      <input id="topic" name="topic" type="text" required placeholder="e.g. 3 quick thumbnail tips" />
+
+      <label for="tone">Tone</label>
+      <select id="tone" name="tone">
+        <option value="concise">Concise / Direct</option>
+        <option value="friendly">Friendly / Conversational</option>
+        <option value="tutorial">Step-by-step Tutorial</option>
+      </select>
+
+      <label for="length">Length (minutes)</label>
+      <input id="length" name="length" type="number" min="1" max="20" value="3" />
+
+      <p class="muted">AI calls are made from the server and only after you accept cookies. <button id="manage-cookies-inline" type="button" class="btn outline small">Manage cookies</button></p>
+
+      <button id="generateScript" class="btn" type="submit">Generate script</button>
+    </form>
+
+    <section id="script-output" aria-live="polite" hidden>
+      <h2>Generated script</h2>
+      <div id="script-text" class="prose"></div>
+      <button id="download-script" class="btn small">Download .txt</button>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    // small client-side handler: form -> /api/generate-script
+    document.addEventListener('DOMContentLoaded', function(){
+      const form = document.getElementById('script-form');
+      const out = document.getElementById('script-output');
+      const scriptText = document.getElementById('script-text');
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        // require consent before calling the endpoint
+        if(localStorage.getItem('cookieConsent') !== 'accepted'){
+          alert('Please accept cookies to use the AI script generator (we do not store your API key in the browser).');
+          return;
+        }
+        const data = {
+          topic: form.topic.value.trim(),
+          tone: form.tone.value,
+          minutes: parseInt(form.length.value,10)
+        };
+        document.getElementById('generateScript').disabled = true;
+        const res = await fetch('/api/generate-script', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(data)
+        });
+        if(res.ok){
+          const json = await res.json();
+          scriptText.textContent = json.script || 'No output';
+          out.hidden = false;
+          // track event (consent checked)
+          window.privacyAnalytics && window.privacyAnalytics.trackEvent && window.privacyAnalytics.trackEvent('generate_script',{topic:data.topic});
+        } else {
+          alert('Script generation failed. Try again later.');
+        }
+        document.getElementById('generateScript').disabled = false;
+      });
+
+      // manage cookies inline opener
+      document.getElementById('manage-cookies-inline').addEventListener('click', function(){ document.getElementById('manage-cookies') && document.getElementById('manage-cookies').click(); });
+      document.getElementById('download-script').addEventListener('click', function(){
+        const text = scriptText.textContent || '';
+        const blob = new Blob([text], {type:'text/plain'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'video-script.txt'; document.body.appendChild(a); a.click();
+        URL.revokeObjectURL(url); a.remove();
+      });
+    });
+  </script>
+</body>
+</html>

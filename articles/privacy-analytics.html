@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy‑first Analytics for Creators — TechScope</title>
+  <meta name="description" content="Measure what matters using privacy‑first analytics. Minimal setup, useful metrics, and consent strategies." />
+  <link rel="canonical" href="https://dannynova.github.io/articles/privacy-analytics.html" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta property="og:title" content="Privacy‑first Analytics for Creators — TechScope" />
+  <meta property="og:description" content="Measure what matters using privacy‑first analytics. Minimal setup, useful metrics, and consent strategies." />
+  <meta property="og:image" content="https://dannynova.github.io/images/articles/privacy-analytics-og.png" />
+  <meta property="og:url" content="https://dannynova.github.io/articles/privacy-analytics.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "mainEntityOfPage": { "@type":"WebPage", "@id": "https://dannynova.github.io/articles/privacy-analytics.html" },
+    "headline":"Privacy‑first Analytics for Creators",
+    "description":"Measure what matters using privacy‑first analytics. Minimal setup, useful metrics, and consent strategies.",
+    "image":"https://dannynova.github.io/images/articles/privacy-analytics-og.png",
+    "author": { "@type":"Person", "name":"TechScope" },
+    "publisher": { "@type":"Organization", "name":"TechScope", "logo": { "@type":"ImageObject", "url":"https://dannynova.github.io/icons/icon-192.png" } },
+    "datePublished":"2025-11-23"
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <article>
+      <header>
+        <h1>Privacy‑first Analytics for Creators</h1>
+        <time datetime="2025-11-23">Nov 23, 2025</time>
+        <p class="muted">Track core metrics without invasive user-level tracking — practical options for small sites and creators.</p>
+      </header>
+
+      <section>
+        <p>Analytics used to mean installing a big cookie-driven script and hoping it helped. Today, creators can get the insights they need — most importantly which pages and CTAs convert — without extensive tracking or compromising visitor privacy. This approach also simplifies consent and improves compliance for AdSense reviews.</p>
+      </section>
+
+      <section>
+        <h2>What to measure (and why)</h2>
+        <ul>
+          <li><strong>Page views:</strong> identify top-performing content.</li>
+          <li><strong>Time on page:</strong> indicates engagement depth.</li>
+          <li><strong>CTA clicks (subscribe, download):</strong> conversion signals you can act on.</li>
+          <li><strong>Video plays:</strong> which content gets watched and where users drop off.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tools & tradeoffs</h2>
+        <p>Plausible, Fathom, and simple self-hosted collectors give aggregated metrics without cookies. They don’t provide user-level tracking (no cross-site profiling) but deliver the signals creators need. If you use Google Analytics, gate it behind consent and use limited collection settings.</p>
+      </section>
+
+      <section>
+        <h2>Consent strategy</h2>
+        <p>Show a clear cookie banner and do not load analytics or ad scripts until the visitor accepts. Keep essential site functions separate from tracking so rejecting cookies does not break the user experience.</p>
+      </section>
+
+      <section>
+        <h2>Implementation snippet (consent-safe)</h2>
+        <pre>// After consent is granted, call this:
+function sendEvent(name,data){
+  // replace with your provider's send method
+  console.log('event', name, data);
+}
+sendEvent('page_view',{path: location.pathname});
+</pre>
+      </section>
+
+      <section>
+        <h2>Try in 30 minutes</h2>
+        <ol>
+          <li>Install a privacy‑first analytics provider (Plausible or Fathom trial).</li>
+          <li>Track three events: page_view, subscribe_click, video_play.</li>
+          <li>Verify events appear in the analytics dashboard and that they only fire after consent.</li>
+        </ol>
+        <p><a href="../downloads/privacy-analytics-starter.js" download>Download: privacy-analytics-starter.js</a></p>
+      </section>
+
+      <section>
+        <h2>Final notes</h2>
+        <p>Less data, when chosen carefully, leads to clearer decisions. Track a few useful events and iterate. Respecting privacy builds trust — and that trust keeps users coming back, which matters more than overly detailed profiling.</p>
+      </section>
+
+      <footer>
+        <p>© <span id="year"></span> TechScope</p>
+      </footer>
+    </article>
+  </main>
+  <script src="../script.js" defer></script>
+</body>
+</html>

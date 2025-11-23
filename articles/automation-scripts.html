@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Small Automation Scripts That Save Hours — TechScope</title>
+  <meta name="description" content="Practical small automation scripts: Python, Bash and lightweight workflows to remove repetitive tasks and save hours each week." />
+  <link rel="canonical" href="https://dannynova.github.io/articles/automation-scripts.html" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta property="og:title" content="Small Automation Scripts That Save Hours — TechScope" />
+  <meta property="og:description" content="Practical small automation scripts: Python, Bash and lightweight workflows to remove repetitive tasks and save hours each week." />
+  <meta property="og:image" content="https://dannynova.github.io/images/articles/automation-scripts-og.jpg" />
+  <meta property="og:url" content="https://dannynova.github.io/articles/automation-scripts.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://dannynova.github.io/articles/automation-scripts.html" },
+    "headline":"Small Automation Scripts That Save Hours",
+    "description":"Practical small automation scripts: Python, Bash and lightweight workflows to remove repetitive tasks and save hours each week.",
+    "image":"https://dannynova.github.io/images/articles/automation-scripts-og.jpg",
+    "author": { "@type":"Person", "name":"TechScope" },
+    "publisher": { "@type":"Organization", "name":"TechScope", "logo": { "@type":"ImageObject", "url":"https://dannynova.github.io/icons/icon-192.png" } },
+    "datePublished":"2025-11-23"
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <article>
+      <header>
+        <h1>Small Automation Scripts That Save Hours</h1>
+        <time datetime="2025-11-23">Nov 23, 2025</time>
+        <p class="muted">Practical scripts and tiny automations you can implement today with minimal setup.</p>
+      </header>
+
+      <section>
+        <p>Automation doesn’t need to be fancy. A short script that runs in 60 seconds can save you hours over a month. This article walks through three high-impact, low-risk scripts you can adopt: a bulk image optimizer, a CSV-to-description generator for batch uploads, and a simple inbox attachment saver. Each example includes a "Try in 30 minutes" checklist and a downloadable starter snippet.</p>
+      </section>
+
+      <section>
+        <h2>1. Bulk image optimizer (Python)</h2>
+        <p>Why: Reducing image file size speeds page load and reduces bandwidth. How: a small Python script with Pillow or an AVIF/WebP encoder will batch-convert and resize images.</p>
+        <pre># Example (concept)
+from PIL import Image
+for path in images:
+    img = Image.open(path)
+    img.resize((1280, auto))
+    img.save(out, format='WEBP', quality=80)
+</pre>
+        <p>Try in 30 minutes: install Pillow, copy your images into a folder, run the script on a test image, check visual quality, then run on the rest. Keep backups.</p>
+      </section>
+
+      <section>
+        <h2>2. CSV → optimized descriptions (Node / Python)</h2>
+        <p>Why: Bulk uploads (videos, products) often require dozens of descriptions and tags. A small script that reads a CSV and outputs tailored descriptions saves copy-paste time and enforces consistency.</p>
+        <p>Approach: read rows, use templates for titles/descriptions, normalize tags. Optionally run a light NLP step (open-source) to suggest keywords.</p>
+        <p>Try in 30 minutes: create a CSV with three sample rows. Run the script and inspect the generated descriptions. Tweak templates as needed.</p>
+      </section>
+
+      <section>
+        <h2>3. Auto-save email attachments (Bash + cloud)</h2>
+        <p>Why: Important attachments get lost in inboxes. Use a simple IMAP script or a lightweight automation tool to download attachments into a dated folder and upload to cloud storage automatically.</p>
+        <p>Security note: use app-specific passwords and do not store credentials in plaintext.</p>
+        <p>Try in 30 minutes: configure IMAP access for a test account, run a script that downloads attachments from unread messages into a folder, then review contents.</p>
+      </section>
+
+      <section>
+        <h2>Maintenance & safety</h2>
+        <p>Always run automations on test data first. Log every action and add a reversible step (move items instead of delete). Schedule periodic checks and keep scripts in a Git repo for versioning.</p>
+      </section>
+
+      <section>
+        <h2>Downloads & starter snippets</h2>
+        <p>Download starter snippets and adapt them to your workflow:</p>
+        <ul>
+          <li><a href="../downloads/bulk-image-optimizer.py" download>bulk-image-optimizer.py</a></li>
+          <li><a href="../downloads/csv-descriptions.py" download>csv-descriptions.py</a></li>
+          <li><a href="../downloads/imap-attachments.sh" download>imap-attachments.sh</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>Want a customized automation? Contact us or subscribe on YouTube for walk-through videos. © <span id="year"></span> TechScope</p>
+      </footer>
+    </article>
+  </main>
+  <script src="../script.js" defer></script>
+</body>
+</html>

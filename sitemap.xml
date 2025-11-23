@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://example.com/about.html</loc><priority>0.6</priority></url>
-  <url><loc>https://example.com/privacy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://dannynova.github.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://dannynova.github.io/about.html</loc><priority>0.6</priority></url>
+  <url><loc>https://dannynova.github.io/contact.html</loc><priority>0.6</priority></url>
+  <url><loc>https://dannynova.github.io/privacy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://dannynova.github.io/terms.html</loc><priority>0.5</priority></url>
+  <url><loc>https://dannynova.github.io/articles/ai-tools.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dannynova.github.io/articles/automation-scripts.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dannynova.github.io/articles/thumbnail-workflow.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dannynova.github.io/articles/repurpose-content.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dannynova.github.io/articles/privacy-analytics.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dannynova.github.io/articles/automate-side-hustle.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dannynova.github.io/articles/home-gadgets-cut-bills.html</loc><priority>0.7</priority></url>
 </urlset>

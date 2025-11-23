@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Batch Content Repurposing: Turn One Video into 10 Assets — TechScope</title>
+  <meta name="description" content="How to turn one recorded video into multiple short-form clips, social posts, and written assets with a repeatable batch workflow." />
+  <link rel="canonical" href="https://dannynova.github.io/articles/repurpose-content.html" />
+  <link rel="stylesheet" href="../styles.css" />
+  <meta property="og:title" content="Batch Content Repurposing: Turn One Video into 10 Assets — TechScope" />
+  <meta property="og:description" content="Turn a single video into dozens of assets: shorts, clips, captions and blog posts with a few repeatable steps." />
+  <meta property="og:image" content="https://dannynova.github.io/images/articles/repurpose-content-og.png" />
+  <meta property="og:url" content="https://dannynova.github.io/articles/repurpose-content.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://dannynova.github.io/articles/repurpose-content.html" },
+    "headline":"Batch Content Repurposing: Turn One Video into 10 Assets",
+    "description":"How to turn one recorded video into multiple short-form clips, social posts, and written assets with a repeatable batch workflow.",
+    "image":"https://dannynova.github.io/images/articles/repurpose-content-og.png",
+    "author": { "@type":"Person", "name":"TechScope" },
+    "publisher": { "@type":"Organization", "name":"TechScope", "logo": { "@type":"ImageObject", "url":"https://dannynova.github.io/icons/icon-192.png" } },
+    "datePublished":"2025-11-23"
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <article>
+      <header>
+        <h1>Batch Content Repurposing: Turn One Video into 10 Assets</h1>
+        <time datetime="2025-11-23">Nov 23, 2025</time>
+        <p class="muted">A repeatable workflow to multiply the reach of every recording without multiplying effort.</p>
+      </header>
+
+      <section>
+        <p>Creating one excellent piece of content is costly — in time, planning, and energy. Repurposing multiplies that investment: one recording becomes short clips, social posts, a blog post, captions, and even email content. The key is a repeatable batch workflow that minimizes interruptions and maximizes output quality.</p>
+      </section>
+
+      <section>
+        <h2>Why batch repurposing works</h2>
+        <p>Working in batches reduces context switching. Instead of editing one asset at a time, do each step across many assets: select clips, edit, export, then caption and schedule. This assembly-line approach is faster and produces consistent results.</p>
+      </section>
+
+      <section>
+        <h2>Simple 5-step batch workflow</h2>
+        <ol>
+          <li><strong>Record with repurposing in mind:</strong> say clear subtopics, pause between ideas, and keep a punchy 10–20 second hook for each point.</li>
+          <li><strong>Transcribe & timestamp:</strong> generate a rough transcript (auto‑transcription) to find strong clips quickly.</li>
+          <li><strong>Clip selection:</strong> pick 6–10 short clips (10–45s) that are standalone and have a hook or value point.</li>
+          <li><strong>Batch edit & brand:</strong> apply a thumbnail template, a simple intro/outro, and consistent color/caption styles across all clips.</li>
+          <li><strong>Export & schedule:</strong> export using consistent filenames and upload metadata from a CSV or automated script.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Tools & automation</h2>
+        <p>Use transcription tools (Otter, Whisper), a clipper/editor that supports batch exports (Descript, Premiere with presets), and simple scripts to convert transcript timestamps to filenames or upload CSVs to schedulers. Small scripts that rename files to your upload format save minutes per asset and avoid mistakes.</p>
+      </section>
+
+      <section>
+        <h2>Quality guardrails</h2>
+        <ul>
+          <li>Keep clips coherent on their own (hook → value → CTA).</li>
+          <li>Use captions — many users watch muted.</li>
+          <li>Check for context errors when you clip out of a longer segment.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Try in 30 minutes</h2>
+        <ol>
+          <li>Pick a 5–8 minute recording and run an auto-transcript (Whisper or similar).</li>
+          <li>Select three distinct clips using transcript timestamps.</li>
+          <li>Export each clip with a small intro & captions and save using a consistent filename pattern.</li>
+          <li>Prepare three social post captions using the CSV snippet below and schedule one post each across platforms.</li>
+        </ol>
+        <p><a href="../downloads/repurpose-csv-template.csv" download>Download: repurpose-csv-template.csv</a></p>
+      </section>
+
+      <section>
+        <h2>Starter script (sample)</h2>
+        <pre># Sample: rename clips from timestamps -> upload-ready
+import os, csv
+with open('repurpose.csv') as f:
+  for row in csv.DictReader(f):
+    fn = f"{row['date']}_{row['title']}_v{row['variant']}.mp4"
+    os.rename(row['source_file'], fn)
+</pre>
+      </section>
+
+      <footer>
+        <p>Want a tailored repurposing plan for your channel? Contact us or subscribe on YouTube for walkthroughs. © <span id="year"></span> TechScope</p>
+      </footer>
+    </article>
+  </main>
+  <script src="../script.js" defer></script>
+</body>
+</html>
