@@ -27,7 +27,6 @@ window.initAnalytics = window.initAnalytics || function(event){
       if(accept) accept.focus({preventScroll:true});
     } 
     // add a simple overlay to discourage interaction until a choice is made
-     // Cookie banner handling (HTML banner present to show immediately)
     if(!document.getElementById('cookie-overlay')){
       const ov = document.createElement('div');
       ov.id = 'cookie-overlay';
@@ -216,10 +215,6 @@ window.initAnalytics = window.initAnalytics || function(event){
       // show the consent prompt immediately on arrival
       window._cookieControls.showBanner();
     }
-
-    // Subscribe tracking: YouTube button
-    const ytBtn = document.getElementById('yt-subscribe-btn');
-    if(ytBtn) ytBtn.addEventListener('click', function(){ trackEvent('subscribe',{method:'youtube', href:this.href}); });
 
     // AJAX email subscribe (fixed/complete)
     const emailForm = document.getElementById('email-subscribe-form');
