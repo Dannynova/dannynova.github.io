@@ -117,7 +117,8 @@ window.initAnalytics = window.initAnalytics || function(event){
           console.warn('Ads not loaded: page content below threshold for ad serving (len=' + textLen + ')');
           return;
         }
-        const client = 'ca-pub-REPLACE';
+        // In your loadAdsense function, update this line:
+        const client = 'ca-pub-5268090468184213'; // Your actual client ID
         const slot = 'AD_SLOT_ID';
         const s = document.createElement('script');
         s.async = true;
